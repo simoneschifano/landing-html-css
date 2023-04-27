@@ -4,8 +4,10 @@
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 120px;
+    display: flex;
+    /* height: fit-content; */
 }
 
 @media screen and (max-width: 1023px) {
@@ -32,9 +34,9 @@
 
 .hero__video::after {
     content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,0.5);
@@ -62,6 +64,9 @@
 }
 
 .hero__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -107,4 +112,44 @@
 
 /******************************* 
 end hero 
+*******************************/
+
+/******************************* 
+services
+*******************************/
+
+.services {
+    position: relative;
+    width: 100%;
+}
+
+.services__item {
+    background-color: var(--color-dark);
+}
+
+.service__item__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services__text {
+    padding: 60px;
+}
+
+.services__item:nth-child(even) .service__item__wrapper {
+
+    flex-direction: row-reverse;
+}
+
+/* .services__item:nth-child(even) .service__item__wrapper .services__text {
+
+    padding-left: 60px;
+} */
+
+.services__text {}
+.services__image {}
+/******************************* 
+end services
 *******************************/

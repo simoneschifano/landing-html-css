@@ -1,6 +1,7 @@
 @import "normalize.css";
 @import "colors.css";
 @import "typography.css";
+@import "animations.css";
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -18,10 +19,8 @@ header {
 
 .main-header {
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    max-width: 1920px;
+    padding: 10px 0px;
+    max-width: 1920px; 
     width: 100%;
     margin: 0 auto;
 }
@@ -29,6 +28,7 @@ header {
 .main-header ul {
     list-style-type: none;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 20px;
 }
@@ -38,18 +38,22 @@ header {
     padding: 10px;
 }
 
+
 .main-header ul a {
     color: var(--color-light);
     text-decoration: none;
 }
 
 @media screen and (min-width: 1024px) {
+    /* .main-header li:hover a{
+        color: red;
+    } */
     .main-header li::after {
         content: "";
         position: absolute;
         top: 0;
         right: 0;
-        width: 0;
+        width: 0px;
         height: 2px;
         background-color: var(--color-secondary);
         transition: width 0.25s ease-in-out;
@@ -76,10 +80,12 @@ header {
 }
 
 .container {
+    position: relative;
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
 }
+
 
 /* button */
 .button {
@@ -91,7 +97,7 @@ header {
     text-transform: uppercase;
     border-radius: 8px;
     overflow: hidden;
-    transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out, background-color 0.55s ease-in-out;
 }
 
 .button span {
@@ -101,9 +107,10 @@ header {
 
 .button:hover {
     color: var(--color-light);
+    background-color: var(--color-dark);
 }
 
-.button::before {
+/* .button::before {
     content: "";
     position: absolute;
     width: 0;
@@ -124,7 +131,7 @@ header {
     left: 0;
     background-color: var(--color-dark);
     border-radius: 8px; 
-}
+} */
 
 
 /* end button */
