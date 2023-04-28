@@ -3,6 +3,10 @@
 @import "typography.css";
 @import "animations.css";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
